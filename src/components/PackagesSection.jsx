@@ -5,6 +5,7 @@ import {
   FaPaypal,
   FaExternalLinkAlt,
   FaGem,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 const SubscriptionsAndPayment = () => {
@@ -53,10 +54,10 @@ const SubscriptionsAndPayment = () => {
   ];
 
   // دالة لتسهيل نسخ النصوص للعملاء بضغطة زر
-  const handleCopy = (text, message) => {
-    navigator.clipboard.writeText(text);
-    alert(`${message} تم نسخه بنجاح!`);
-  };
+  // const handleCopy = (text, message) => {
+  //   navigator.clipboard.writeText(text);
+  //   alert(`${message} تم نسخه بنجاح!`);
+  // };
 
   return (
     <div
@@ -131,24 +132,24 @@ const SubscriptionsAndPayment = () => {
       </section>
 
       {/* ==================== سكشن وسائل الدفع الفاخرة ==================== */}
-      <section id="payment" className="container mx-auto max-w-6xl">
+<section id="payment" className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 relative">
           <div className="absolute inset-0 bg-amber-500/10 blur-[120px] w-72 h-72 mx-auto rounded-full"></div>
           <h2 className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-amber-400 mb-4 tracking-tight">
             طرق الدفع الآمنة والسريعة
           </h2>
           <p className="text-gray-400 max-w-md mx-auto text-sm">
-            نقبل التحويلات البنكية المباشرة عبر بنك الإمارات NBD أو الدفع السريع
+            نقبل التحويلات البنكية المباشرة عبر التواصل مع الدعم أو الدفع السريع
             والآمن من أي مكان في العالم باستخدام حساب PayPal.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* كرت الحساب البنكي الفخم (تأثير كروت الفيزا) - يأخذ 7 أعمدة */}
-          <div className="lg:col-span-7 bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 p-8 rounded-3xl relative overflow-hidden shadow-2xl group">
+          {/* كرت الحساب البنكي الفخم - تم تعديله ليتضمن زر التواصل عبر الواتساب */}
+          <div className="lg:col-span-7 bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 p-8 rounded-3xl relative overflow-hidden shadow-2xl group min-h-[440px] flex flex-col justify-between">
             <div className="absolute -top-16 -left-16 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl group-hover:bg-amber-500/20 transition-all duration-500"></div>
 
-            <div className="flex justify-between items-center mb-8">
+            <div className="flex justify-between items-center mb-6">
               <div className="flex items-center gap-3">
                 <div className="p-3 bg-amber-500/10 text-amber-400 rounded-2xl border border-amber-500/20">
                   <FaCreditCard className="text-2xl" />
@@ -158,109 +159,47 @@ const SubscriptionsAndPayment = () => {
                     التحويل البنكي المباشر
                   </h4>
                   <p className="text-xs text-amber-500/80 font-medium">
-                    Emirates NBD
+                    Secure Bank Transfer
                   </p>
                 </div>
               </div>
               <span className="text-xs font-mono text-neutral-500 tracking-wider">
-                OFFICIAL POOL
+                OFFICIAL PAYMENT
               </span>
             </div>
 
-            {/* تفاصيل بيانات الحساب مع أزرار نسخ ذكية للعميل */}
-            <div className="space-y-4 font-sans">
-              {/* اسم صاحب الحساب */}
-              <div className="bg-black/40 border border-neutral-800 p-4 rounded-2xl flex justify-between items-center">
-                <div>
-                  <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">
-                    اسم المستفيد
-                  </p>
-                  <p className="text-sm md:text-base font-semibold text-neutral-200">
-                    Juma Saeed Sbait Sal Al Kaabi
-                  </p>
-                </div>
-                <button
-                  onClick={() =>
-                    handleCopy("Juma Saeed Sbait Sal Al Kaabi", "الاسم")
-                  }
-                  className="p-2 text-neutral-400 hover:text-white bg-neutral-800/50 hover:bg-neutral-800 rounded-lg transition-colors"
-                  title="نسخ الاسم"
-                >
-                  <FaCopy />
-                </button>
-              </div>
-
-              {/* الـ IBAN */}
-              <div className="bg-black/40 border border-neutral-800 p-4 rounded-2xl flex justify-between items-center">
-                <div>
-                  <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">
-                    رقم الآيبان (IBAN)
-                  </p>
-                  <p className="text-sm md:text-base font-mono font-bold tracking-wider text-amber-400">
-                    AE33 0260 7512 3000 0424 687
-                  </p>
-                </div>
-                <button
-                  onClick={() =>
-                    handleCopy("AE330260751230000424687", "الآيبان")
-                  }
-                  className="p-2 text-neutral-400 hover:text-white bg-neutral-800/50 hover:bg-neutral-800 rounded-lg transition-colors"
-                  title="نسخ الآيبان"
-                >
-                  <FaCopy />
-                </button>
-              </div>
-
-              {/* رقم الحساب وباقي التفاصيل الصغيره */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-black/40 border border-neutral-800 p-4 rounded-2xl flex justify-between items-center">
-                  <div>
-                    <p className="text-[10px] text-gray-500 mb-1">رقم الحساب</p>
-                    <p className="text-sm font-mono font-bold text-neutral-300">
-                      751230000424687
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => handleCopy("751230000424687", "رقم الحساب")}
-                    className="text-neutral-500 hover:text-white"
-                  >
-                    <FaCopy size={14} />
-                  </button>
-                </div>
-
-                <div className="bg-black/40 border border-neutral-800 p-4 rounded-2xl flex justify-between items-center">
-                  <div>
-                    <p className="text-[10px] text-gray-500 mb-1">
-                      رمز السويفت (SWIFT Code)
-                    </p>
-                    <p className="text-sm font-mono font-bold text-neutral-300">
-                      EBILAEADXXX
-                    </p>
-                  </div>
-                  <button
-                    onClick={() => handleCopy("EBILAEADXXX", "رمز السويفت")}
-                    className="text-neutral-500 hover:text-white"
-                  >
-                    <FaCopy size={14} />
-                  </button>
-                </div>
-              </div>
-
-              {/* ملاحظة ظهور اسم الشركة الوسيطة المذكورة في الداتا */}
-              <div className="bg-amber-500/5 border border-amber-500/20 p-4 rounded-2xl">
-                <p className="text-xs text-amber-400/90 leading-relaxed">
-                  💡 <strong className="font-bold">ملاحظة هامة:</strong> قد يظهر
-                  اسم صاحب الحساب كـ{" "}
-                  <span className="font-mono bg-black/30 px-1 py-0.5 rounded text-white">
-                    EITC FINANCIAL SERVICES POOL ACCOUNT
-                  </span>{" "}
-                  بعد إضافته كمستفيد في تطبيقك البنكي.
+            {/* محتوى الكارت البديل لحماية البيانات */}
+            <div className="flex-1 flex flex-col justify-center items-center text-center my-6 space-y-6">
+              <div className="max-w-sm">
+                <p className="text-gray-300 text-base font-medium mb-2">
+                  لحماية بياناتكم وتسهيل عملية الدفع
+                </p>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  يرجى النقر على الزر أدناه للتواصل مباشرة مع الدعم الفني عبر الواتساب للحصول على تفاصيل الحساب البنكي وإتمام عملية التحويل بأمان.
                 </p>
               </div>
+
+              {/* زر الواتساب الشيك الفخم */}
+              <a
+                href="https://wa.me/971543334355" // استبدل YOUR_NUMBER_HERE برقم الواتساب الخاص بك مع رمز الدولة (بدون أصفار أو علامة +)
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-bold px-8 py-4 rounded-2xl shadow-lg shadow-emerald-950/40 hover:shadow-emerald-500/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 group/btn"
+              >
+                <FaWhatsapp className="text-2xl animate-pulse group-hover/btn:scale-110 transition-transform" />
+                <span className="tracking-wide">طلب بيانات التحويل عبر الواتساب</span>
+              </a>
+            </div>
+
+            {/* ملاحظة أمان سفلية لملء الفراغ بشكل أنيق */}
+            <div className="bg-neutral-950/60 border border-neutral-800/80 p-4 rounded-2xl text-center">
+              <p className="text-xs text-neutral-400">
+                🔒 الدعم الفني متواجد على مدار الساعة لتأكيد تحويلك فوراً.
+              </p>
             </div>
           </div>
 
-          {/* كرت الـ PayPal والدفع عبر الـ QR Code - يأخذ 5 أعمدة */}
+          {/* كرت الـ PayPal والدفع عبر الـ QR Code - كما هو دون تغيير */}
           <div className="lg:col-span-5 grid grid-cols-1 gap-6 w-full">
             {/* اللوجو الصغير الخاص بالـ PayPal */}
             <div className="bg-neutral-900 border border-neutral-800 p-6 rounded-3xl flex items-center justify-between group hover:border-blue-500/40 transition-colors">
@@ -288,9 +227,9 @@ const SubscriptionsAndPayment = () => {
                 FAST SCAN
               </div>
 
-              <h5 className="font-black text-xl tracking-tight text-neutral-900 mb-1">
+              {/* <h5 className="font-black text-xl tracking-tight text-neutral-900 mb-1">
                 Juma Alkaabi
-              </h5>
+              </h5> */}
               <p className="text-xs text-neutral-500 mb-4">
                 امسح الكود التالي ضوئياً للإرسال الفوري
               </p>
@@ -303,13 +242,15 @@ const SubscriptionsAndPayment = () => {
                 />
               </div>
 
-              <span className="text-[11px] font-medium text-neutral-400 mt-4 tracking-wide">
+              {/* <span className="text-[11px] font-medium text-neutral-400 mt-4 tracking-wide">
                 مسح ضوئي للدفع لحساب Juma Alkaabi
-              </span>
+              </span> */}
             </div>
           </div>
         </div>
       </section>
+
+      
     </div>
   );
 };
