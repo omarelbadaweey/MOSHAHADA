@@ -53,12 +53,6 @@ const SubscriptionsAndPayment = () => {
     },
   ];
 
-  // دالة لتسهيل نسخ النصوص للعملاء بضغطة زر
-  // const handleCopy = (text, message) => {
-  //   navigator.clipboard.writeText(text);
-  //   alert(`${message} تم نسخه بنجاح!`);
-  // };
-
   return (
     <div
       id="packages"
