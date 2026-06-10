@@ -1,144 +1,3 @@
-// //__ProgramsSection__//
-// import React from "react";
-// import { FaDownload } from "react-icons/fa";
-
-// const ProgramsSection = () => {
-//   const programs = [
-//     {
-//       id: 1,
-//       name: "تطبيق الأندرويد",
-//       description: "لتشغيل البث على أجهزة الأندرويد",
-//       downloadUrl: "https://aftv.news/2169095",
-//       code: "2169095",
-//       image:
-//         "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-//       gradient: "from-green-500 to-emerald-600",
-//       link: "https://aftv.news/2169095",
-//     },
-//     {
-//       id: 2,
-//       name: "تطبيق الأيفون",
-//       description: "لتشغيل البث على أجهزة iOS",
-//       downloadUrl: "https://apps.apple.com/app/000-player/id1665441224",
-//       code: "882",
-//       image:
-//         "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-//       gradient: "from-blue-500 to-cyan-600",
-//       link: "https://apps.apple.com/app/000-player/id1665441224",
-//     },
-//     {
-//       id: 3,
-//       name: "تطبيق الويندوز",
-//       description: "لتشغيل البث على أجهزة الكمبيوتر",
-//       downloadUrl: "https://ch4k.live/CeMe/CeMe-win.exe",
-//       code: "لا يحتاج كود تفعيل",
-//       image:
-//         "https://images.unsplash.com/photo-1547082299-de196ea013d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
-//       gradient: "from-purple-500 to-pink-600",
-//       link: "https://ch4k.live/CeMe/CeMe-win.exe",
-//     },
-//   ];
-
-//   return (
-//     <section
-//       dir="rtl"
-//       id="programs"
-//       className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden"
-//     >
-//       <div className="absolute inset-0 opacity-5">
-//         <div className="absolute top-10 left-10 w-64 h-64 bg-cyan-500 rounded-full blur-3xl animate-pulse"></div>
-//         <div className="absolute bottom-10 right-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl animate-pulse delay-1000"></div>
-//       </div>
-
-//       <div className="container mx-auto px-4 relative z-10">
-//         <div className="text-center mb-16">
-//           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-//             برامج{" "}
-//             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-//               التشغيل
-//             </span>
-//           </h2>
-//           <p className="text-gray-400 text-xl max-w-3xl mx-auto leading-relaxed">
-//             حمل البرامج المناسبة لجهازك واستمتع بتجربة بث متميزة بجودة عالية
-//           </p>
-//         </div>
-
-//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-//           {programs.map((program) => (
-//             <div
-//               key={program.id}
-//               className=" group relative bg-gray-800 rounded-3xl overflow-hidden border border-gray-700 hover:border-cyan-500/50 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
-//             >
-//               {/* الصورة */}
-//               <div className="relative h-48 overflow-hidden">
-//                 <img
-//                   src={program.image}
-//                   alt={program.name}
-//                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-//                 />
-//                 <div
-//                   className={`absolute inset-0 bg-gradient-to-br ${program.gradient} opacity-20`}
-//                 ></div>
-//                 <div className="absolute top-4 right-4">
-//                   <span className="bg-black/70 text-white px-3 py-2 rounded-full text-sm font-semibold backdrop-blur-sm">
-//                     {program.name.split(" ")[1]}
-//                   </span>
-//                 </div>
-//               </div>
-
-//               {/* content */}
-//               <div className="p-4">
-//                 <h3 className="text-2xl font-bold text-white mb-2">
-//                   {program.name}
-//                 </h3>
-//                 <p className="text-gray-400 text-lg mb-6 leading-relaxed">
-//                   {program.description}
-//                 </p>
-
-//                 {/*active code*/}
-//                 {program.code && (
-//                   <div className="mb-4 p-3 bg-gray-700/50 rounded-xl border border-gray-600 backdrop-blur-sm">
-//                     <div className="text-cyan-400 text-sm mb-2 font-semibold">
-//                       كود التفعيل:
-//                     </div>
-//                     <div className="flex items-center justify-between">
-//                       <code className="text-white font-mono text-lg bg-gray-800 px-4 py-2 rounded-lg">
-//                         {program.code}
-//                       </code>
-//                       <a
-//                         href={program.link}
-//                         className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 p-2"
-//                       >
-//                         <FaDownload className="text-base" />
-//                       </a>
-//                     </div>
-//                   </div>
-//                 )}
-
-//                 {/* download button*/}
-//                 <a
-//                   href={program.downloadUrl}
-//                   rel="noopener noreferrer"
-//                   className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-4 px-6 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center space-x-3 rtl:space-x-reverse group/btn text-lg shadow-lg hover:shadow-cyan-500/25"
-//                 >
-//                   <span>تحميل البرنامج</span>
-//                   <FaDownload className="group-hover/btn:animate-bounce text-xl mr-2" />
-//                 </a>
-//               </div>
-
-//               {/* effect*/}
-//               <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default ProgramsSection;
-
-
 
 //__ProgramsSection__//
 import React from "react";
@@ -150,9 +9,9 @@ const ProgramsSection = () => {
       id: 1,
       name: "تطبيق الأندرويد",
       description: "لتشغيل البث على أجهزة الأندرويد والشاشات الذكية الشغالة بنظام Android.",
-      downloadUrl: "https://aftv.news/2169095",
-      code: "2169095",
-      image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      downloadUrl: "https://aftv.news/9520213",
+      code: "5920213",
+      image: "/android.png",
       icon: <FaAndroid className="text-xl text-emerald-400" />,
       badge: "Android",
     },
@@ -161,8 +20,8 @@ const ProgramsSection = () => {
       name: "تطبيق الأيفون",
       description: "لتشغيل البث على أجهزة iOS (أيفون، أيباد، و Apple TV) بأداء مستقر.",
       downloadUrl: "https://apps.apple.com/app/000-player/id1665441224",
-      code: "882",
-      image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      code: "9002",
+      image: "/iphone.png",
       icon: <FaApple className="text-xl text-cyan-400" />,
       badge: "iOS / Apple",
     },
@@ -172,7 +31,7 @@ const ProgramsSection = () => {
       description: "البرنامج الرسمي لتشغيل البث على أجهزة الكمبيوتر واللاب توب بنظام Windows.",
       downloadUrl: "https://ch4k.live/CeMe/CeMe-win.exe",
       code: "لا يحتاج كود تفعيل",
-      image: "https://images.unsplash.com/photo-1547082299-de196ea013d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80",
+      image: "/Windows.png",
       icon: <FaLaptop className="text-xl text-purple-400" />,
       badge: "Windows",
     },

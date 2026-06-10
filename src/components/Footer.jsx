@@ -48,7 +48,7 @@ const Footer = () => {
                 <img
                   className="w-44 mx-auto"
                   src="/logo.jpeg"
-                  alt="Ceme Utv logo"
+                  alt="MOSHAHADA Logo"
                 />
               </h3>
             </div>
@@ -57,7 +57,7 @@ const Footer = () => {
 
             <div className=" my-5 flex justify-center space-x-3 rtl:space-x-reverse ">
               <a
-                href="https://facebook.com"
+                // href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-all duration-300 transform hover:scale-110"
@@ -67,7 +67,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://twitter.com"
+                // href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" bg-sky-500 hover:bg-sky-600 text-white p-2 rounded-lg transition-all duration-300 transform hover:scale-110"
@@ -77,7 +77,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://instagram.com"
+                // href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-pink-600 mx-3 hover:bg-pink-700 text-white p-2 rounded-lg transition-all duration-300 transform hover:scale-110"
@@ -87,7 +87,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://telegram.com"
+                // href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-lg transition-all duration-300 transform hover:scale-110"
@@ -98,7 +98,7 @@ const Footer = () => {
             </div>
 
             <div className="text-gray-200 text-md">
-              © 2025 MOSHAHADA. جميع الحقوق محفوظة.
+              © 2026 MOSHAHADA. جميع الحقوق محفوظة.
             </div>
           </div>
         </div>

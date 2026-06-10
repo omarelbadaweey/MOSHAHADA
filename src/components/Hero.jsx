@@ -7,11 +7,11 @@ const Hero = () => {
     setIsVisible(true);
   }, []);
 
-  //__scroll_To_programs__//
-  const programsScroll = () => {
-    const programs = document.getElementById("payment");
-    if (programs) {
-      programs.scrollIntoView({ behavior: "smooth" });
+  //__scroll_To_payments__//
+  const paymentsScroll = () => {
+    const paymenta = document.getElementById("payment");
+    if (paymenta) {
+      paymenta.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -23,6 +23,14 @@ const Hero = () => {
     }
   };
 
+    //__scroll_To_programs__//
+  const programsScroll = () => {
+    const programs = document.getElementById("programs");
+    if (programs) {
+      programs.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       dir="rtl"
@@ -31,7 +39,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="/bg-hero.png"
-          alt="Medical Companion Background"
+          alt="Hero MOSHAHADA"
           className="w-full h-full object-cover opacity-10"
         />
       </div>
@@ -106,10 +114,16 @@ const Hero = () => {
                 احدث العروض
               </button>
               <button
-                onClick={programsScroll}
+                onClick={paymentsScroll}
                 className="cursor-pointer border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-6 lg:px-8 py-3 lg:py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-sm lg:text-base"
               >
                 طرق الدفع
+              </button>
+                            <button
+                onClick={programsScroll}
+                className="cursor-pointer bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg text-sm lg:text-base"
+              >
+               تحميل البرامج
               </button>
             </div>
           </div>
@@ -123,7 +137,6 @@ const Hero = () => {
             }`}
           >
             <div className="relative max-w-md mx-auto lg:max-w-full">
-              {/* <div className="absolute -inset-2 lg:-inset-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl opacity-20 blur-xl animate-pulse"></div> */}
               {/*image_content */}
               <div className="relative bg-gray-800 rounded-2xl p-4 lg:p-4 border-5 border-amber-700/50 shadow-2xl">
                 <div className="w-full overflow-hidden h-64 md:h-80 lg:h-96 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl flex items-center justify-center border-3 border-dashed border-amber-700/70 p-.5 ">
