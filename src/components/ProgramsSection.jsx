@@ -19,7 +19,7 @@ const ProgramsSection = () => {
       id: 2,
       name: "تطبيق الأيفون",
       description: "لتشغيل البث على أجهزة iOS (أيفون، أيباد، و Apple TV) بأداء مستقر.",
-      downloadUrl: "https://apps.apple.com/app/000-player/id1665441224",
+      downloadUrl: "https://apps.apple.com/app/id6443335504",
       code: "9002",
       image: "/iphone.png",
       icon: <FaApple className="text-xl text-cyan-400" />,

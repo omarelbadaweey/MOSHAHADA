@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <section
       dir="rtl"
-      className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative lg:-mt-5 bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-screen flex items-center justify-center overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
         <img

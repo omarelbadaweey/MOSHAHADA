@@ -33,9 +33,9 @@ const Footer = () => {
       {showScroll && (
         <button
           onClick={scrollToTop}
-          className="cursor-pointer fixed bottom-6 right-6 z-50 border-white border-3 outline-3 outline-amber-500 bg-amber-500 hover:bg-amber-600 text-white p-2 rounded-full shadow-lg transition-all duration-300"
+          className="animate-bounce cursor-pointer fixed bottom-6 right-6 z-50 border-white border-3 outline-3 outline-amber-500 bg-amber-500 hover:bg-amber-600 text-white p-2 rounded-full shadow-lg transition-all duration-300"
         >
-          <FaArrowUp className="text-3xl" />
+          <FaArrowUp className="text-2xl" />
         </button>
       )}
 

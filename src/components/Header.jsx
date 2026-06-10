@@ -393,8 +393,9 @@ const Header = () => {
             >
               {/* تأثير النبض الخلفي */}
               <span className="absolute inset-0 rounded-xl bg-green-500/30 animate-pulse pointer-events-none"></span>
+              <span className=" md:inline-block mr-2 text-sm font-bold tracking-wide"> </span>
               <FaWhatsapp className="text-2xl transition-transform group-hover:rotate-12" />
-              <span className="hidden md:inline-block mr-2 text-sm font-bold tracking-wide">الدعم الفني</span>
+              <span className=" md:inline-block mr-2 text-sm font-bold tracking-wide"> </span>
             </a>
 
             {/* الزر الثاني: المبيعات والاشتراكات (ذهبي ملكي فاخر) */}
@@ -405,8 +406,9 @@ const Header = () => {
               title="المبيعات والحسابات"
               className="relative flex items-center justify-center bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 text-white p-3 rounded-xl transition-all duration-300 shadow-[0_0_15px_rgba(245,158,11,0.4)] hover:shadow-[0_0_25px_rgba(245,158,11,0.7)] hover:scale-105 group border border-amber-400/30"
             >
+              <span className="  mr-2 text-sm font-bold tracking-wide"></span>
               <FaWhatsapp className="text-2xl transition-transform group-hover:rotate-12" />
-              <span className="hidden md:inline-block mr-2 text-sm font-bold tracking-wide">المبيعات والحسابات</span>
+              <span className="  mr-2 text-sm font-bold tracking-wide"></span>
             </a>
 
           </div>
