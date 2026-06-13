@@ -1,22 +1,32 @@
 
 //__ProgramsSection__//
 import React from "react";
-import { FaDownload, FaCopy, FaLaptop, FaApple, FaAndroid } from "react-icons/fa";
+import { FaDownload, FaCopy, FaLaptop, FaApple, FaAndroid, FaTelegramPlane } from "react-icons/fa";
 
 const ProgramsSection = () => {
   const programs = [
     {
       id: 1,
-      name: "تطبيق الأندرويد",
+      name: "تطبيق الأندرويد (1) ",
       description: "لتشغيل البث على أجهزة الأندرويد والشاشات الذكية الشغالة بنظام Android.",
-      downloadUrl: "https://aftv.news/9520213",
-      code: "5920213",
+      downloadUrl: "https://aftv.news/7983703",
+      code: "7983703",
       image: "/android.png",
       icon: <FaAndroid className="text-xl text-emerald-400" />,
       badge: "Android",
     },
     {
       id: 2,
+      name: "تطبيق الأندرويد (2) ",
+      description: "لتشغيل البث على أجهزة الأندرويد والشاشات الذكية الشغالة بنظام Android.",
+      downloadUrl: "https://aftv.news/7348505",
+      code: "7348505",
+      image: "/android2.png",
+      icon: <FaAndroid className="text-xl text-emerald-400" />,
+      badge: "Android",
+    },
+    {
+      id: 3,
       name: "تطبيق الأيفون",
       description: "لتشغيل البث على أجهزة iOS (أيفون، أيباد، و Apple TV) بأداء مستقر.",
       downloadUrl: "https://apps.apple.com/app/id6443335504",
@@ -26,7 +36,7 @@ const ProgramsSection = () => {
       badge: "iOS / Apple",
     },
     {
-      id: 3,
+      id: 4,
       name: "تطبيق الويندوز",
       description: "البرنامج الرسمي لتشغيل البث على أجهزة الكمبيوتر واللاب توب بنظام Windows.",
       downloadUrl: "https://ch4k.live/CeMe/CeMe-win.exe",
@@ -45,7 +55,9 @@ const ProgramsSection = () => {
   };
 
   return (
-    <section
+
+    <>
+        <section
       dir="rtl"
       id="programs"
       className="py-24 bg-gradient-to-b from-neutral-950 via-gray-950 to-black text-white relative overflow-hidden"
@@ -56,7 +68,7 @@ const ProgramsSection = () => {
         <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-amber-500/10 rounded-full blur-[150px]"></div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+      <div className="container mx-auto relative z-10 px-4">
         
         {/* الهيدر والعنوان بتأثير التدرج اللوني الفخم */}
         <div className="text-center mb-16 relative">
@@ -69,7 +81,7 @@ const ProgramsSection = () => {
         </div>
 
         {/* شبكة عرض تطبيقات التشغيل */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 max-w-7xl mx-auto">
           {programs.map((program) => (
             <div
               key={program.id}
@@ -143,6 +155,93 @@ const ProgramsSection = () => {
         </div>
       </div>
     </section>
+
+
+
+
+    <section
+      dir="rtl"
+      id="telegram-channel"
+      className="py-24 bg-gradient-to-b from-neutral-950 via-gray-950 to-black text-white relative overflow-hidden"
+    >
+      {/* تأثير الإضاءة النيون الخلفية المطابقة تماماً للسكشن الأول ولكن بثيم أزرق متوهج */}
+      <div className="absolute inset-0 pointer-events-none opacity-20">
+        <div className="absolute top-1/4 left-10 w-96 h-96 bg-blue-500/10 rounded-full blur-[150px]"></div>
+        <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-[150px]"></div>
+      </div>
+
+      <div className="container mx-auto relative z-10 px-4">
+        
+        {/* الهيدر والعنوان بتأثير التدرج اللوني الفخم مطابق للسكشن الأول */}
+        <div className="text-center mb-16 relative">
+          <h2 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-blue-400 mb-4 tracking-tight">
+            تابعنا على تليجرام
+          </h2>
+          <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+            انضم إلى قناتنا الرسمية لتكون أول من يصله التحديثات، العروض الحصرية، وأحدث الأخبار فور صدورها.
+          </p>
+        </div>
+
+        {/* كارت التليجرام الرئيسي المطور بنفس ستايل كروت التطبيقات */}
+        <div className="max-w-3xl mx-auto group relative bg-gradient-to-b from-neutral-900 to-neutral-950 border border-neutral-800 p-8 md:p-12 rounded-3xl overflow-hidden transition-all duration-500 hover:border-blue-500/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] text-center">
+          
+          {/* تأثير التوهج الداخلي عند التحويم للمظهر الفخم */}
+          <div className="absolute -top-16 -left-16 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all duration-500"></div>
+          <div className="absolute -bottom-16 -right-16 w-40 h-40 bg-cyan-500/5 rounded-full blur-3xl group-hover:bg-cyan-500/15 transition-all duration-500"></div>
+
+          <div className="flex flex-col items-center space-y-6 relative z-10">
+            
+            {/* أيقونة التليجرام الكبيرة المطورة بتأثير الباك دروب لوك والنبض */}
+            <div className="p-5 bg-blue-500/10 text-blue-400 rounded-2xl border border-blue-500/20 shadow-lg shadow-blue-950/20 group-hover:scale-110 transition-transform duration-300">
+              <FaTelegramPlane className="text-4xl" />
+            </div>
+
+            {/* تفاصيل القناة بنصوص واضحة */}
+            <div className="space-y-2">
+              <h3 className="text-2xl md:text-3xl font-black text-neutral-100 group-hover:text-blue-400 transition-colors duration-300 tracking-tight">
+                القناة الرسمية MOSHAHADA 
+
+              </h3>
+              <p className="text-sm md:text-base text-blue-400/80 font-mono tracking-wider">
+                MOSHAHADA TV
+
+              </p>
+            </div>
+
+            <p className="text-gray-400 text-sm md:text-base max-w-md leading-relaxed">
+              مجتمعنا ينمو بسرعة! لا تفوت فرصة التواجد معنا للاستفادة من المحتوى اليومي والتواصل المباشر مع مجتمعنا الإبداعي.
+            </p>
+
+            {/* زر الانضمام الشيك والمطور بالتأثير المتوهج الجديد المطابق للأول */}
+            <a
+              href="https://t.me/sbooot47"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-neutral-800 hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-xl transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)] group/btn"
+            >
+              <FaTelegramPlane className="text-xl opacity-80 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+              <span>انضم للقناة الآن</span>
+            </a>
+
+            {/* عداد التفاعل السفلي الجمالي */}
+            <div className="pt-6 border-t border-neutral-800/80 w-full max-w-xs flex justify-center items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-green-500 animate-ping"></span>
+              <p className="text-xs text-neutral-500 font-medium">
+                متفاعلون ومتاحون الآن على مدار الساعة
+              </p>
+            </div>
+          </div>
+
+          {/* الخط النيوني السفلي الجمالي المطابق تماماً لستايل الأول */}
+          <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-blue-500 to-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+        </div>
+      </div>
+    </section>
+
+
+    </>
+
+
   );
 };
 
